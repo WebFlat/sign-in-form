@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sign-in-form</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<link rel="icon" href="img/favicon(WebFlat).ico"/>
+	<link rel="stylesheet" href="css/style.css" />
+
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="form">
+		<header class="form__header">
+			<a href="#" class="form__link form__link--active">Sign in</a>
+			<a href="#" class="form__link">Join us</a>
+		</header>	
+		<label for="name" class="form__label">Username</label>
+		<input type="text" id="name" class="form__input" name="name" required maxlength="10">
+		<label for="password" class="form__label">Password</label>
+		<input type="password" name="password" id="password"class="form__input" required maxlength="6">
+		<div>
+			<input type="checkbox" id="chkb" class="form__chkb" checked>
+			<span style="vertical-align: middle;">Keep me signed in</span>
+		</div>
+		<button class="form__btn" type="submit">Sign in</button>
+		<footer class="footer">
+			<a href="#" class="footer__link">Forgot password</a>
+			<a href="#" class="footer__link">Create an account</a>
+		</footer>
+	</div>											
+</body>
+</html>

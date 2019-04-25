@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+@import 'normalize';
+
+@mixin tr {
+	transition: all .3s ease-in;
+}
+@mixin my_pos ($top: 50%, $left: 50%, $tx: -50%, $ty: -50%) {
+	position: absolute;
+	top: $top;
+	left: $left;
+	transform: translate($tx, $ty);
+}
+$light-color: #fbf6e4;
+$dark-color: #e1c2f1;
+$btn-color: #23ae92;
+$f-link-color: #b9b9cc;
+$border-input: #8d7cc3;
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 10px;
+	height: 100%;
+}
+
+body{
+	font-family: 'Quicksand', sans-serif;
+	min-height: 100%;
+	font-size: 1.6rem;
+	line-height: 1.6;
+	color: $light-color;
+	background-color: #e5eeee;
+	padding: 50px;
+	letter-spacing: .1em;
+}
+
+.form {
+	margin: 0;
+	max-width: 450px;
+	width: 80%;
+	padding: 55px 70px;
+	background: #3624ab url(../img/bg.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	@include my-pos();
+	display: flex;
+	flex-direction: column;
+	&__header {
+		display: inline-block;
+		margin-bottom: 50px;
+	}
+	&__link {
+		padding: 0;
+		margin: 0;
+		display: inline-block;
+		margin-right: 20px;
+		font-size: 1.8rem;
+		text-decoration: none;
+		border-bottom: 2px solid transparent;
+		color: $dark-color;
+		font-weight: bold;
+		@include tr;
+		&:hover,
+		&:active,
+		&:focus {
+			border-color: #e66a64;
+			color: $light-color; 
+		}
+		&--active {
+			border-color: #e66a64;
+			color: $light-color; 
+		} 
+	}
+	&__label {
+		margin-bottom: 10px;
+		font-weight: bold;
+	}
+	&__input {
+		min-height: 40px;
+		border: 2px solid $border-input;
+		background-color: transparent;
+		margin-bottom: 15px;
+		padding: 5px;
+		outline: none;
+		color: $light-color;
+		font-size: 1.6rem;
+		@include tr;
+		&:hover,
+		&:active,
+		&:focus {
+			border-color: $light-color;
+		}
+	}
+	&__chkb {
+		// display: inline-block;
+		margin-right: 5px;
+		width: 20px;
+		height: 20px;
+		color: $light-color;
+		background: $btn-color;
+		vertical-align: middle;
+	}
+	&__btn {
+		letter-spacing: .1em;
+		margin-top: 40px;
+		background-color: $btn-color;
+		color: $light-color;
+		padding: 15px;
+		font-weight: bold;
+		font-size: 1.8rem;
+		@include tr;
+		cursor: pointer;
+		&:hover,
+		&:active,
+		&:focus {
+			background-color: $light-color;
+			color: $btn-color;
+		}
+	}
+}
+.footer {
+	margin-top: 30px;
+	display: flex;
+	justify-content: space-between;
+	letter-spacing: 0;
+	&__link {
+		color: $f-link-color;
+		text-decoration: none;
+		padding-bottom: 2px; 
+		border-bottom: 1px solid $f-link-color;
+		@include tr;
+		opacity: .6;
+		font-weight: 500;
+		&:hover {
+			color: $light-color;
+		}
+	}
+}
+
